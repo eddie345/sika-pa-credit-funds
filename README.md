@@ -1,73 +1,98 @@
-# React + TypeScript + Vite
+# Sika Pa Credit Funds Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, premium fintech dashboard for managing credit funds and loan operations with Server-Side Rendering (SSR) support.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🎨 Premium glassmorphism UI with emerald green branding
+- 🔐 Secure admin authentication portal
+- 📊 Comprehensive loan management system
+- 💰 Loan approval workflow with amortization schedules
+- 🔍 Advanced search and filtering capabilities
+- 📱 Fully responsive design
+- ⚡ Server-Side Rendering for optimal performance
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Frontend**: React 19, Vite 6
+- **Styling**: Tailwind CSS v3
+- **Icons**: Lucide React
+- **Backend**: Express.js (SSR)
+- **Deployment**: Vercel
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Prerequisites
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- Node.js 18+ 
+- npm or yarn
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Installation
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+# Clone the repository
+git clone https://github.com/eddie345/sika-pa-credit-funds.git
+
+# Navigate to project directory
+cd sika-pa-credit-funds
+
+# Install dependencies
+npm install --legacy-peer-deps
+
+# Start development server
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### SSR Development
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+# Start SSR server
+npm run dev:ssr
 ```
+
+The SSR server will run on `http://localhost:5175`
+
+## Deployment
+
+### Vercel Deployment
+
+1. Push your code to GitHub
+2. Visit [Vercel](https://vercel.com)
+3. Import your GitHub repository
+4. Vercel will auto-detect the Vite framework
+5. Deploy!
+
+## Admin Credentials
+
+- **Email**: admin@sikapacredit.com
+- **Password**: admin123
+
+## Project Structure
+
+```
+sika-pa-credit-funds/
+├── src/
+│   ├── components/
+│   │   └── layout/
+│   │       ├── DashboardLayout.tsx
+│   │       ├── Header.tsx
+│   │       └── Sidebar.tsx
+│   ├── pages/
+│   │   ├── Login.tsx
+│   │   └── Loans.tsx
+│   ├── App.tsx
+│   ├── main.tsx
+│   └── index.css
+├── server.js              # SSR server
+├── vite.config.ts
+├── tailwind.config.js
+└── package.json
+```
+
+## License
+
+MIT
+
+## Author
+
+Eddie345
